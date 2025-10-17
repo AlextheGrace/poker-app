@@ -1,4 +1,3 @@
-"use client";
 import { useState } from 'react';
 
 export default function PokerTimerApp() {
@@ -11,9 +10,9 @@ export default function PokerTimerApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-800 via-green-700 to-green-900 flex items-center justify-center p-4">
+    <div className="h-screen w-screen overflow-hidden bg-gradient-to-br from-green-800 via-green-700 to-green-900 flex items-center justify-center p-4">
       {/* Poker table pattern overlay */}
-      <div className="absolute inset-0 opacity-10" style={{
+      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
         backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
         backgroundSize: '20px 20px'
       }}></div>
@@ -32,7 +31,7 @@ export default function PokerTimerApp() {
             {/* Input Field */}
             <div>
               <label htmlFor="pokerInput" className="block text-yellow-200 font-semibold mb-2">
-                Enter Name or Game Info
+                Game Info
               </label>
               <input
                 id="pokerInput"
